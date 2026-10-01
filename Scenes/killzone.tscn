@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dhq0pa6na6p7k"]
+
+[node name="Floor" type="Area2D" unique_id=398017205]

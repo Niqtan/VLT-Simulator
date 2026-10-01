@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://d6b24iqeway1"]
+
+[ext_resource type="Texture2D" uid="uid://b6pwqs0hgjafx" path="res://Assets/VLT-Vitasoy-Lemon-Tea-Drink-250mL-Pack-of-6_0e17f27b-15f1-440d-9083-583462c627a4.f96d3c.webp" id="1_dclkj"]
+
+[node name="Node2D" type="Sprite2D" unique_id=2143651537]
+position = Vector2(8.9999695, 1)
+scale = Vector2(0.17015707, 0.15619546)
+texture = ExtResource("1_dclkj")

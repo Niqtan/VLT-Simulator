@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dnoi8sf8ixw0s"]
+
+[ext_resource type="Script" uid="uid://racuwksof1d7" path="res://Scenes/characters.gd" id="1_hs1m0"]
+[ext_resource type="Texture2D" uid="uid://eqanpm7iykbv" path="res://Assets/Dynasty_Kingdoms_Pack_1/Dynasty_Kingdoms_Pack_1_Qianguo_Preview.png" id="1_uwqtg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hs1m0"]
+atlas = ExtResource("1_uwqtg")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejwxu"]
+atlas = ExtResource("1_uwqtg")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtbha"]
+atlas = ExtResource("1_uwqtg")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxmeh"]
+atlas = ExtResource("1_uwqtg")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hs1m0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejwxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtbha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxmeh")
+}],
+"loop": 1,
+"name": &"Idle Time",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_13qdw"]
+radius = 91.0
+height = 224.0
+
+[node name="Characters" type="CharacterBody2D" unique_id=688206093]
+script = ExtResource("1_hs1m0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1220891015]
+sprite_frames = SubResource("SpriteFrames_xrivr")
+animation = &"Idle Time"
+frame_progress = 0.7122214
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1235502017]
+position = Vector2(-8, 1)
+shape = SubResource("CapsuleShape2D_13qdw")
